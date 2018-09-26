@@ -48,8 +48,10 @@ int main (int argc, char** argv) {
 		bufferRev[size - 1 - i] = buffer[i];
 
 	//Rewriting to the file after the words have been reversed
-	write_file (*(argv + OUTPUT_FILE), bufferRev, size);
-
+	
+	//write_file (*(argv + OUTPUT_FILE), bufferRev, size);
+	//rewritten code to use array notation instead
+	write_file(argv[OUTPUT_FILE],bufferRev,size);
 	//More error checking once the file has been written to
 	if (errno != 0)
 	{
